@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Variux_Base::top_level" module="Variux_Base" resource="Variux_Base::top_level" sortOrder="30" dependsOnModule="Variux_Base" title="Variux"/>
+	</menu>
+</config>

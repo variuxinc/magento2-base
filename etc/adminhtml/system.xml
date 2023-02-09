@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="variux" translate="label" sortOrder="0">
+			<label>Variux</label>
+		</tab>
+		<section id="general" sortOrder="0" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>General</label>
+			<tab>variux</tab>
+			<resource>Variux_Base::config_variux_base</resource>
+			<group id="fetching_news" sortOrder="0" showInWebsite="0" showInStore="0" showInDefault="1" translate="label">
+				<label>Variux News</label>
+				<field id="enable" type="select" sortOrder="10" showInWebsite="0" showInStore="0" showInDefault="1" translate="label">
+					<label>Enable</label>
+					<comment>Fetching news from Variux</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

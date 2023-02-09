@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+	<group id="variux">
+		<job name="variux_base_fetchingnews" instance="Variux\Base\Cron\FetchingNews" method="execute">
+			<schedule>*/5 * * * *</schedule>
+		</job>
+	</group>
+</config>
