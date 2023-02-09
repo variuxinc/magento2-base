@@ -1,4 +1,4 @@
-# Mage2 Module Variux Base
+# Module Variux Base
 
     ``variux/module-base``
 
