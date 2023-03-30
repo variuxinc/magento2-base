@@ -7,19 +7,34 @@ declare(strict_types=1);
 
 namespace Variux\Base\Cron;
 
+use Psr\Log\LoggerInterface;
+use Variux\Base\Helper\CoreHelper;
+
 class FetchingNews
 {
 
+    /**
+     * @var LoggerInterface
+     */
     protected $logger;
+
+    /**
+     * @var CoreHelper
+     */
+    protected $coreHelper;
 
     /**
      * Constructor
      *
-     * @param \Psr\Log\LoggerInterface $logger
+     * @param CoreHelper      $coreHelper
+     * @param LoggerInterface $logger
      */
-    public function __construct(\Psr\Log\LoggerInterface $logger)
+    public function __construct(
+        \Variux\Base\Helper\CoreHelper $coreHelper,
+        \Psr\Log\LoggerInterface $logger)
     {
         $this->logger = $logger;
+        $this->coreHelper = $coreHelper;
     }
 
     /**
@@ -29,7 +44,9 @@ class FetchingNews
      */
     public function execute()
     {
-        $this->logger->addInfo("Cronjob FetchingNews is executed.");
+        if($this->coreHelper->isEnabledFetchingNews()) {
+            $this->logger->addInfo("Cronjob FetchingNews is executed.");
+        }
     }
 }
 

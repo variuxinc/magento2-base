@@ -11,6 +11,9 @@ use Magento\Framework\App\Helper\AbstractHelper;
 
 class CoreHelper extends AbstractHelper
 {
+    public const XML_MODULE_CONFIG_VENDOR = 'variux';
+
+    public const XML_ENABLE_FETCHING_NEWS = '/fetching_news/enable';
 
     /**
      * @param \Magento\Framework\App\Helper\Context $context
@@ -24,9 +27,9 @@ class CoreHelper extends AbstractHelper
     /**
      * @return bool
      */
-    public function isEnabled()
+    public function isEnabledFetchingNews()
     {
-        return true;
+        return $this->scopeConfig->isSetFlag(self::XML_MODULE_CONFIG_VENDOR . self::XML_ENABLE_FETCHING_NEWS);
     }
 }
 
