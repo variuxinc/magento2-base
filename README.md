@@ -1,6 +1,6 @@
 # Module Variux Base
 
-    `variux/module-base`
+    variux/module-base
 
  - [Main Functionalities](#markdown-header-main-functionalities)
  - [Installation](#markdown-header-installation)
